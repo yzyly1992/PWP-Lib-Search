@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Card = ({ name, email, id }) => {
+const Card = ({ name, category, dataType, thumb150path, path }) => {
 	return (
-			<div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
-				<img alt='robots' src={`https://robohash.org/${id}?200x200&set=set2`} />
+			<div className='tc bg-white dib br3 pa3 ma2 grow bw2 shadow-5'>
+				<img alt='items' src={thumb150path} />
 				<div>
-					<h2>{name}</h2>
-					<p>{email}</p>
+					<a href={`file://${path}`} target="_blank"><h2>{name}</h2></a>
+					<p>{category}, {dataType}</p>
 				</div>
 			</div>
 		);

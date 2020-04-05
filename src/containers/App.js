@@ -9,15 +9,20 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			robots: [],
+			items: [],
 			searchfield: ''
 		}
 	}
 
 	componentDidMount() {
-		fetch('https://jsonplaceholder.typicode.com/users')
+		fetch("./plants.json", {
+			headers : { 
+			  'Content-Type': 'application/json',
+			  'Accept': 'application/json'
+			 }
+		  })
 			.then(response => response.json())
-			.then(users => this.setState({ robots: users }));
+			.then(plants => this.setState({ items: plants }));
 	}
 
 	onSearchChange = (event) => {
@@ -25,19 +30,19 @@ class App extends Component {
 	}
 
 	render() {
-		const { robots, searchfield } = this.state;
-		const filteredRobots = robots.filter(robot =>{
-			return robot.name.toLowerCase().includes(searchfield.toLowerCase())
+		const { items, searchfield } = this.state;
+		const filteredPlants = items.filter(item =>{
+			return item.name.toLowerCase().includes(searchfield.toLowerCase())
 		})
-		return (!robots.length) ? 
+		return (!items.length) ? 
 		<h1>Loading</h1> :
 		(
 			<div className='tc'>
-			<h1 className='f1'>RobotFriends</h1>
+			<h1 className='f1'>PWP Lib Search</h1>
 			<SearchBox searchChange={this.onSearchChange}/>
 			<Scroll>
 				<ErrorBoundary>
-					<CardList robots={filteredRobots} />
+					<CardList items={filteredPlants} />
 				</ErrorBoundary>
 			</Scroll>
 			</div>

@@ -10,3 +10,15 @@ h1 {
 	font-weight: 200;
 	color: #0ccac4;
 }
+
+h2 {
+	color: #396e5c;
+}
+
+p {
+	color: #858585;
+}
+
+a {
+	text-decoration: none;
+}
