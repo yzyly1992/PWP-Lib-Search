@@ -1,15 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Test Image Folder
+**/public/Thumbnails/
+**/build/
 
-# testing
-/coverage
-
-# production
-/build
+# Image Files
+*.png
+*.jpg
 
 # misc
 .DS_Store
@@ -21,3 +18,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules
