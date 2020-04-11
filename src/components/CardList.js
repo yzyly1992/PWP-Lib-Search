@@ -8,11 +8,11 @@ const CardList = ({ items }) => {
 				return (
 					<Card 
 					key={index}
-					name={items[index].name} 
-					category={items[index].category} 
-					dataType={items[index].dataType}
-					thumb150path={items[index].thumb150path}
-					path={items[index].path}
+					id={item.id}
+					name={item.name} 
+					category={item.category} 
+					dataType={item.dataType}
+					thumb150path={item.thumb150path}
 					/>
 				);
 			})
