@@ -14,9 +14,8 @@ const CardList = ({ items }) => {
 					dataType={item.dataType}
 					thumb150path={item.thumb150path}
 					/>
-				);
-			})
-		}
+				);})
+			}
 		</div>
 	);
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
 import './App.css';
-import Scroll from '../components/Scroll';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Home from '../components/Home';
+import Detail from '../components/Detail';
 import { connect } from 'react-redux';
 import { setSearchField, requestPlants } from '../actions';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 
 class App extends Component {
@@ -15,22 +15,30 @@ class App extends Component {
 	}
 
 	render() {
-		const { searchField, onSearchChange, items, isPending } = this.props;
-		const filteredPlants = items.filter(item =>{
-			return item.name.toLowerCase().includes(searchField.toLowerCase())
+		const { searchField, items, isPending, onSearchChange } = this.props;
+		const filteredPlants = items.filter(item => {
+			return item.name.toLowerCase().includes(searchField.toLowerCase()) || item.category.toLowerCase().includes(searchField.toLowerCase())
 		})
 		return isPending ? 
 		<h1>Loading</h1> :
 		(
-            <div className='tc'>
-                <h1 className='f1'>PWP Lib Search</h1>
-                <SearchBox searchChange={onSearchChange}/>
-                <Scroll>
-                    <ErrorBoundary>
-                        <CardList items={filteredPlants} />
-                    </ErrorBoundary>
-                </Scroll>
-            </div>
+			<Router>
+				<div>
+					<Switch>
+						<Route 
+							exact 
+							name="home"
+							path="/" 
+							render={(props) => <Home {...props} onSearchChange={ onSearchChange } filteredPlants={ filteredPlants } />}
+						/>
+						<Route 
+							name="detail"
+							path="/plants/:detailId" 
+							render={(props) => <Detail {...props} items={ items } />}
+						/>
+					</Switch>
+				</div>
+			</Router>
 		);
 		
 	}
