@@ -19,7 +19,7 @@ export const searchPlants = (state=initialStateSearch, action={}) => {
 }
 
 const initialStateItems = {
-    isPending: false,
+    isPending: true,
     items: [],
     error: ''
 }

@@ -5,7 +5,6 @@ const Detail = ({ items }) => {
     let { detailId } = useParams();
     // eslint-disable-next-line
     const item = items.find(item => item.id == detailId)
-    // const item = { "name":"N/A", "thumb300path":"N/A","fileSize":"N/A","imageSize":[0,0],"createTime":"N/A","path":"N/A","mac":"N/A"}
     return (
         <div className='tc bg-white br3 pa3 ma2 shadow-5'>
             <img alt='item' src={item.thumb300path} />
