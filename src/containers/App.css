@@ -8,17 +8,18 @@ src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
 h1 {
 	font-family: 'SEGA LOGO FONT';
 	font-weight: 200;
-	color: #0ccac4;
+	color: #baf8e6;
 }
 
-h2 {
-	color: #396e5c;
+h3 {
+	color: #363636;
 }
 
 p {
-	color: #858585;
+	color: #727272;
 }
 
 a {
+	color: #1eaa8c;
 	text-decoration: none;
 }

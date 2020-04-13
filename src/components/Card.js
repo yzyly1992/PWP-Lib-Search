@@ -10,7 +10,7 @@ const Card = ({ id, name, category, dataType, thumb150path }) => {
 						key={id} 
 						to={`/plants/${id}`}
 					>
-						{name}
+						<h3>{name}</h3>
 					</Link>
 					<p>{category}, {dataType}</p>
 				</div>

@@ -6,7 +6,7 @@ import CardList from '../components/CardList';
 
 const Home = ({ onSearchChange, filteredPlants }) => 
     <div className='tc'>
-        <h1 className='f1'>PWP Lib Search</h1>
+        <h1 className='f1'>PWP LIB SEARCH</h1>
         <SearchBox searchChange={ onSearchChange }/>
         <Scroll>
             <ErrorBoundary>
