@@ -1,4 +1,22 @@
+# PWP Library Search
+
+A search engine web app for PWP Landscape Architecture Library. Currently, it includes all the plant cutout images on the PWP server. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Revision History
+#### 2020-04-05 
+Beta 0.0.1: Test with local images, change the color theme.
+#### 2020-04-07
+Beta 0.0.2: Update JSON plants database and plant images thumbnails.
+#### 2020-04-10
+Beta 1.0.1: Add detail page, apply router, link, redux, connect and so on.
+#### 2020-04-11
+Beta 1.0.2: Revise detail page, has problem when refresh or manually type url of detail page. It can not pass store data to the detail page.
+#### 2020-04-12
+Beta 2.0.1: Fix the error of refreshing detail page by change the default value of isPending to true.
+Beta 2.0.2: Fix masOS link, modify website theme.
+
 
 ## Available Scripts
 

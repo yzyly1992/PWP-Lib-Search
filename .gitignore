@@ -4,10 +4,6 @@
 **/public/Thumbnails/
 **/build/
 
-# Image Files
-*.png
-*.jpg
-
 # misc
 .DS_Store
 .env.local
