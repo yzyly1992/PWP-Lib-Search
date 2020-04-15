@@ -16,6 +16,8 @@ Beta 1.0.2: Revise detail page, has problem when refresh or manually type url of
 #### 2020-04-12
 Beta 2.0.1: Fix the error of refreshing detail page by change the default value of isPending to true.
 Beta 2.0.2: Fix masOS link, modify website theme.
+#### 2020-04-14
+Beta 2.1.0: Add Google Knowledge Graph api to the detail page to show item's description and image.
 
 
 ## Available Scripts
