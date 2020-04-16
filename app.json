@@ -1,0 +1,10 @@
+{
+  apps : [
+    {
+      name      : "pwplib",
+      script    : "/usr/lib/node_modules/serve/bin/serve.js",
+      interpreter: "none",
+      args: "-s -n /home/dyang/PWP-Lib-Search/build/"
+    }
+  ]
+}
