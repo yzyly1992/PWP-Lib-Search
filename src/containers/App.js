@@ -52,12 +52,12 @@ class App extends Component {
 						/>
 					</Switch>
 				</Router>
-				<footer class="pv4 ph3 ph5-m ph6-l light-green">
-					<small class="f6 db tc">© 2020 <b class="ttu">PWP Landscape Architecture</b> All Rights Reserved</small>
-					<div class="tc mt3 mb4">
-						<a href="#" title="Language" class="f6 dib ph2 link light-green dim">Language</a>
-						<a href="#" title="Terms" class="f6 dib ph2 link light-green dim">Terms of Use</a>
-						<a href="#" title="Privacy" class="f6 dib ph2 link light-green dim">Privacy</a>
+				<footer className="pv4 ph3 ph5-m ph6-l light-green">
+					<small className="f6 db tc">© 2020 <b className="ttu">PWP Landscape Architecture</b> All Rights Reserved</small>
+					<div className="tc mt3 mb4">
+						<a href="#" title="Language" className="f6 dib ph2 link light-green dim">Language</a>
+						<a href="#" title="Terms" className="f6 dib ph2 link light-green dim">Terms of Use</a>
+						<a href="#" title="Privacy" className="f6 dib ph2 link light-green dim">Privacy</a>
 					</div>
 				</footer>
 			</div>

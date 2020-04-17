@@ -1,23 +1,29 @@
 import React from 'react';
-import Card from './Card';
+import { Link } from 'react-router-dom';
+import { LazyLoadImage, trackWindowScroll }
+  from 'react-lazy-load-image-component';
 
-const CardList = ({ items }) => {
+const CardList = ({ items, scrollPosition }) => {
 	return (
 		<div>
 			{items.map((item, index) => {
 				return (
-					<Card 
-					key={index}
-					id={item.id}
-					name={item.name} 
-					category={item.category} 
-					dataType={item.dataType}
-					thumb150path={item.thumb150path}
-					/>
+					<div className='tc bg-white dib br3 pa3 ma2 grow bw2 shadow-5'>
+						<LazyLoadImage alt={index} src={item.thumb150path} scrollPosition={scrollPosition} />
+						<div>
+							<Link
+								key={item.id} 
+								to={`/plants/${item.id}`}
+							>
+								<h3>{item.name}</h3>
+							</Link>
+							<p>{item.category}, {item.dataType}</p>
+						</div>
+					</div>
 				);})
 			}
 		</div>
 	);
 }
 
-export default CardList;
+export default trackWindowScroll(CardList);

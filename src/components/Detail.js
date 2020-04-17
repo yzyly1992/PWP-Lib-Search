@@ -18,8 +18,6 @@ const Detail = ({ items }) => {
         if (err) { 
             console.error(err)
         };
-        console.log(data);
-        // if (data !== undefined && data !== null && data !== '' && data !== []) {
         if (data !== undefined && data !== null && Object.keys(data).length !== 0) {
             document.getElementById("kgname").appendChild(document.createTextNode(data[0].result.name));
             if ("detailedDescription" in data[0].result) {
@@ -31,7 +29,7 @@ const Detail = ({ items }) => {
             document.getElementById("kglink").href = data[0].result.detailedDescription.url;
             };
         }
-    })
+    });
 
     return (
         <div className="flex items-center flex-column">
@@ -52,11 +50,11 @@ const Detail = ({ items }) => {
                     </Link>
                 </div>
             </div>
-            <div className='tc bg-white br3 pa3 ma2 mw7 shadow-5'>
-                <div id="kgimage"></div>
-                <h2 id="kgname"></h2>
-                <p id="kgdesc"></p>
-                <a id="kglink" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <div id='rel' className='tc bg-white br3 pa3 ma2 mw7 shadow-5'>
+                <div id="kgimage"/>
+                <h2 id="kgname" />
+                <p id="kgdesc" />
+                <a id="kglink" href="!#" target="_blank" rel="noopener noreferrer" />
             </div>
         </div>
     );
