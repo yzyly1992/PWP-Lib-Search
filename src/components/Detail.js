@@ -19,20 +19,33 @@ const Detail = ({ items }) => {
             console.error(err)
         };
         if (data !== undefined && data !== null && Object.keys(data).length !== 0) {
-            document.getElementById("kgname").appendChild(document.createTextNode(data[0].result.name));
+            var kgitem = document.createElement('div');
+            kgitem.id='rel';
+            kgitem.className='tc bg-white br3 pa3 ma2 mw7 shadow-5';
+            document.getElementById("detail").appendChild(kgitem);
+            if ("image" in data[0].result) {
+            var kgimg = document.createElement('img');
+            kgimg.src = data[0].result.image.contentUrl;
+            document.getElementById("rel").appendChild(kgimg);
+            };
+            var kghead = document.createElement('h2');
+            kghead.textContent = data[0].result.name;
+            document.getElementById("rel").appendChild(kghead);
             if ("detailedDescription" in data[0].result) {
-            var img = document.createElement('img');
-            img.src = data[0].result.image.contentUrl;
-            document.getElementById("kgimage").appendChild(img)
-            document.getElementById("kgdesc").appendChild(document.createTextNode(data[0].result.detailedDescription.articleBody));
-            document.getElementById("kglink").appendChild(document.createTextNode(data[0].result.detailedDescription.url));
-            document.getElementById("kglink").href = data[0].result.detailedDescription.url;
+            var kgdesc = document.createElement('p');
+            kgdesc.textContent = data[0].result.detailedDescription.articleBody;
+            document.getElementById("rel").appendChild(kgdesc);
+            var kglink = document.createElement('a');
+            kglink.href = data[0].result.detailedDescription.url;
+            kglink.textContent = data[0].result.detailedDescription.url;
+            kglink.target="_blank";
+            document.getElementById("rel").appendChild(kglink);
             };
         }
     });
 
     return (
-        <div className="flex items-center flex-column">
+        <div id="detail" className="flex items-center flex-column">
             <div className='tc bg-white br3 pa3 ma2 mw7 shadow-5'>
                 <img alt='item' src={item.thumb300path} />
                 <div>
@@ -49,12 +62,6 @@ const Detail = ({ items }) => {
                         <p className="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib navy">Return to List</p>
                     </Link>
                 </div>
-            </div>
-            <div id='rel' className='tc bg-white br3 pa3 ma2 mw7 shadow-5'>
-                <div id="kgimage"/>
-                <h2 id="kgname" />
-                <p id="kgdesc" />
-                <a id="kglink" href="!#" target="_blank" rel="noopener noreferrer" />
             </div>
         </div>
     );

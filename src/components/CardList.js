@@ -8,11 +8,10 @@ const CardList = ({ items, scrollPosition }) => {
 		<div>
 			{items.map((item, index) => {
 				return (
-					<div className='tc bg-white dib br3 pa3 ma2 grow bw2 shadow-5'>
+					<div key = {item.id} className='tc bg-white dib br3 pa3 ma2 grow bw2 shadow-5'>
 						<LazyLoadImage alt={index} src={item.thumb150path} scrollPosition={scrollPosition} />
 						<div>
 							<Link
-								key={item.id} 
 								to={`/plants/${item.id}`}
 							>
 								<h3>{item.name}</h3>

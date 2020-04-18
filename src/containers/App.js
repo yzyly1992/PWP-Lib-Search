@@ -55,9 +55,9 @@ class App extends Component {
 				<footer className="pv4 ph3 ph5-m ph6-l light-green">
 					<small className="f6 db tc">© 2020 <b className="ttu">PWP Landscape Architecture</b> All Rights Reserved</small>
 					<div className="tc mt3 mb4">
-						<a href="#" title="Language" className="f6 dib ph2 link light-green dim">Language</a>
-						<a href="#" title="Terms" className="f6 dib ph2 link light-green dim">Terms of Use</a>
-						<a href="#" title="Privacy" className="f6 dib ph2 link light-green dim">Privacy</a>
+						<a href="/language" title="Language" className="f6 dib ph2 link light-green dim">Language</a>
+						<a href="/terms" title="Terms" className="f6 dib ph2 link light-green dim">Terms of Use</a>
+						<a href="/privacy" title="Privacy" className="f6 dib ph2 link light-green dim">Privacy</a>
 					</div>
 				</footer>
 			</div>
