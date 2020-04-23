@@ -22,6 +22,8 @@ Beta 2.1.0: Add Google Knowledge Graph api to the detail page to show item's des
 Beta 2.2.0: Add image lazy load, tremendously increase the performance. Remove the wrong data from json.
 #### 2020-04-17
 Beta 2.2.1: Change the wiki object accordingly depending on whether it has information. Fix all minor error about href contents.
+#### 2020-04-22
+Beta 3.0.0: Add other data type: people and texture. On difficulty of switching data.
 
 
 ## Available Scripts
