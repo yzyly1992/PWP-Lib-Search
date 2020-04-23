@@ -1,9 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Test Image Folder
-**/public/Thumbnails/
-**/public/Thumbnails-People/
-build
+**/Thumbnails/
+**/Thumbnails-People/
+**/build/
 
 # misc
 .DS_Store
