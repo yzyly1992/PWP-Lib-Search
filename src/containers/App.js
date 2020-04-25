@@ -34,8 +34,7 @@ class App extends Component {
 		const filteredPlants = items.filter(item => {
 			return item.name.toLowerCase().includes(searchField.toLowerCase()) || item.category.toLowerCase().includes(searchField.toLowerCase())
 		});
-        return isPending ? <h1 className='tc'>Loading</h1> :
-		(
+        return (
 			<div>
 				<Router>
 					<Switch>
@@ -43,7 +42,7 @@ class App extends Component {
 							exact 
 							name="home"
 							path="/"
-							render={(props) => <Home {...props} onSearchChange={ onSearchChange } filteredPlants={ filteredPlants } dataType={ dataType } />}
+							render={(props) => <Home {...props} isPending={isPending} onSearchChange={ onSearchChange } filteredPlants={ filteredPlants } dataType={ dataType } />}
 						/>
 						<Route 
 							name="detail"
