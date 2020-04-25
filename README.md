@@ -24,6 +24,8 @@ Beta 2.2.0: Add image lazy load, tremendously increase the performance. Remove t
 Beta 2.2.1: Change the wiki object accordingly depending on whether it has information. Fix all minor error about href contents.
 #### 2020-04-22
 Beta 3.0.0: Add other data type: people and texture. On difficulty of switching data.
+#### 2020-04-24
+Beta 3.0.2: Clickable images, sticky title and search bar, truncate text, next title text font.
 
 
 ## Available Scripts

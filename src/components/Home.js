@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
@@ -17,19 +16,21 @@ class Home extends Component {
     render() {
         return(
             <div className='tc'>
-                <h1 className='f1'>PWP LIB SEARCH</h1>
-                <div className="tc pb3">
-                    <a className="link dim light-green f6 f5-ns dib mr3" href="#plants" onClick= {() => { this.props.onRequestPlants(); this.props.onChangeDataType('plants');}} >PLANTS</a>
-                    <a className="link dim light-green f6 f5-ns dib mr3" href="#people" onClick={() => {this.props.onRequestPeople(); this.props.onChangeDataType('people');}} >PEOPLE</a>
-                    <a className="link dim light-green f6 f5-ns dib mr3" href="#texture" onClick={() => {this.props.onRequestTexture(); this.props.onChangeDataType('texture');}} >TEXTURE</a>
-                    <a className="link dim light-green f6 f5-ns dib" href="#project" title="Projects">PROJECT</a>
+                <div className='sticky samebg'>
+                    <h1 className='f2 mb3 dib mr2'>PWP Library Search</h1>
+                    <p className="light-green dib cg f7">Beta 3.0.2</p>
+                    <div className="tc pb2 cg">
+                        <a className="link light-green f6 f5-ns dib mr3 hover-yellow" href="#plants" onClick= {() => { this.props.onRequestPlants(); this.props.onChangeDataType('plants');}} >Plants</a>
+                        <a className="link light-green f6 f5-ns dib mr3 hover-light-pink" href="#people" onClick={() => {this.props.onRequestPeople(); this.props.onChangeDataType('people');}} >People</a>
+                        <a className="link light-green f6 f5-ns dib hover-navy" href="#texture" onClick={() => {this.props.onRequestTexture(); this.props.onChangeDataType('texture');}} >Texture</a>
+                    </div>
+                    <SearchBox searchChange={ this.props.onSearchChange }/>
                 </div>
-                <SearchBox searchChange={ this.props.onSearchChange }/>
-                <Scroll>
+                <div className='understicky'>
                     <ErrorBoundary>
                         <CardList items={ this.props.filteredPlants } dataType={this.props.dataType} />
                     </ErrorBoundary>
-                </Scroll>
+                </div>
             </div>
         )
     }

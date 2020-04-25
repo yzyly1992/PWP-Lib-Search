@@ -1,13 +1,6 @@
-@font-face {
-font-family: 'SEGA LOGO FONT';
-font-style: normal;
-font-weight: normal;
-src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
-}
-
 h1 {
-	font-family: 'SEGA LOGO FONT';
-	font-weight: 200;
+	font-family: 'Century Gothic';
+	font-weight: 100;
 	color: #baf8e6;
 }
 
@@ -26,4 +19,25 @@ p {
 a {
 	color: #1eaa8c;
 	text-decoration: none;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.samebg {
+	background: linear-gradient(to right, #34e89e 0%, #0f3443 100%);
+}
+
+.understicky {
+	position: absolute;
+	top: 191px;
+}
+
+.cg {
+	font-family: 'Century Gothic';
 }
