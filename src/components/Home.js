@@ -18,11 +18,12 @@ class Home extends Component {
             <div className='tc'>
                 <div className='sticky samebg'>
                     <h1 className='f2 mb3 dib mr2'>PWP Library Search</h1>
-                    <p className="light-green dib cg f7">Beta 3.0.3</p>
+                    <p className="light-green dib cg f7">Beta 3.0.5</p>
                     <div className="tc pb2 cg">
                         <a className="link light-green f6 f5-ns dib mr3 hover-yellow" href="#plants" onClick= {() => { this.props.onRequestPlants(); this.props.onChangeDataType('plants');}} >Plants</a>
                         <a className="link light-green f6 f5-ns dib mr3 hover-light-pink" href="#people" onClick={() => {this.props.onRequestPeople(); this.props.onChangeDataType('people');}} >People</a>
-                        <a className="link light-green f6 f5-ns dib hover-navy" href="#texture" onClick={() => {this.props.onRequestTexture(); this.props.onChangeDataType('texture');}} >Texture</a>
+                        <a className="link light-green f6 f5-ns dib mr3 hover-navy" href="#texture" onClick={() => {this.props.onRequestTexture(); this.props.onChangeDataType('texture');}} >Texture</a>
+                        <a className="link light-green f6 f5-ns dib hover-white" href="http://pwplibsearch:4000" target="_blank" rel="noopener noreferrer">WB</a>
                     </div>
                     <SearchBox searchChange={ this.props.onSearchChange }/>
                 </div>

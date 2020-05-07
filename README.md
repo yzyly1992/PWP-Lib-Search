@@ -26,6 +26,8 @@ Beta 2.2.1: Change the wiki object accordingly depending on whether it has infor
 Beta 3.0.0: Add other data type: people and texture. On difficulty of switching data.
 #### 2020-04-24
 Beta 3.0.2: Clickable images, sticky title and search bar, truncate text, next title text font.
+#### 2020-05-07
+Beta 3.0.5: Add white board app. See repositories [[white-board]](https://github.com/yzyly1992/white-board).
 
 
 ## Available Scripts
