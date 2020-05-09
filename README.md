@@ -28,6 +28,8 @@ Beta 3.0.0: Add other data type: people and texture. On difficulty of switching 
 Beta 3.0.2: Clickable images, sticky title and search bar, truncate text, next title text font.
 #### 2020-05-07
 Beta 3.0.5: Add white board app. See repositories [[white-board]](https://github.com/yzyly1992/white-board).
+#### 2020-05-08
+Beta 3.0.6: Remove white board. Add 3D component data into the search.
 
 
 ## Available Scripts

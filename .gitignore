@@ -4,10 +4,12 @@
 **/Thumbnails/
 **/Thumbnails-People/
 **/Thumbnails-Texture/
+**/Thumbnails-3D/
 **/build/
 
 # misc
 .DS_Store
+.env.development
 .env.local
 .env.development.local
 .env.test.local

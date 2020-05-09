@@ -3,12 +3,13 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import { connect } from 'react-redux';
-import { requestPlants, requestPeople, requestTexture, changeDataType } from '../actions';
+import { requestPlants, requestPeople, requestTexture, request3D, changeDataType } from '../actions';
 
 const mapDispatchToProps = (dispatch) => ({
     onRequestPlants: () => dispatch(requestPlants()),
     onRequestPeople: () => dispatch(requestPeople()),
     onRequestTexture: () => dispatch(requestTexture()),
+    onRequest3D: () => dispatch(request3D()),
     onChangeDataType: (type) => dispatch(changeDataType(type))
 });
 
@@ -23,7 +24,7 @@ class Home extends Component {
                         <a className="link light-green f6 f5-ns dib mr3 hover-yellow" href="#plants" onClick= {() => { this.props.onRequestPlants(); this.props.onChangeDataType('plants');}} >Plants</a>
                         <a className="link light-green f6 f5-ns dib mr3 hover-light-pink" href="#people" onClick={() => {this.props.onRequestPeople(); this.props.onChangeDataType('people');}} >People</a>
                         <a className="link light-green f6 f5-ns dib mr3 hover-navy" href="#texture" onClick={() => {this.props.onRequestTexture(); this.props.onChangeDataType('texture');}} >Texture</a>
-                        <a className="link light-green f6 f5-ns dib hover-white" href="http://pwplibsearch:4000" target="_blank" rel="noopener noreferrer">WB</a>
+                        <a className="link light-green f6 f5-ns dib hover-white" href="#3d" onClick={() => {this.props.onRequest3D(); this.props.onChangeDataType('3d');}}>3D</a>
                     </div>
                     <SearchBox searchChange={ this.props.onSearchChange }/>
                 </div>

@@ -21,7 +21,6 @@ const mapDispatchToProps = (dispatch) => {
 		onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
 		onRequestPlants: () => dispatch(requestPlants()),
 		onChangeDataType: (type) => dispatch(changeDataType(type))
-
 	}
 }
 
@@ -46,7 +45,7 @@ class App extends Component {
 						/>
 						<Route 
 							name="detail"
-							path={["/plants/:detailId", "/people/:detailId", "/texture/:detailId"]}
+							path={["/plants/:detailId", "/people/:detailId", "/texture/:detailId", "/3d/:detailId"]}
 							render={(props) => <Detail {...props} items={ items } dataType={ dataType } />}
 						/>
 					</Switch>
