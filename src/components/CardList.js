@@ -8,14 +8,14 @@ const CardList = ({ items, dataType, scrollPosition }) => {
 		<div>
 			{items.map((item, index) => {
 				return (
-					<div key = {item.id} className='tc bg-white dib br3 pa3 ma2 grow bw2 shadow-5'>
+					<div key = {item.id} className='tc dib pa3 ma2 grow br3 ba dark-gray b--black-10'>
 							<Link
 								to={`/${dataType}/${item.id}`}
 							>
 								<LazyLoadImage alt={index} src={item.thumb150path} scrollPosition={scrollPosition} />
 								<h3>{item.name}</h3>
 							</Link>
-							<p>{item.category}, {item.dataType}</p>
+							<p className="f6 mt0">{item.category}, {item.dataType}</p>
 					</div>
 				);})
 			}

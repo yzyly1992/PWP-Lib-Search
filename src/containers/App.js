@@ -31,7 +31,7 @@ class App extends Component {
     render() {
         const { searchField, items, isPending, onSearchChange, dataType } = this.props;
 		const filteredPlants = items.filter(item => {
-			return item.name.toLowerCase().includes(searchField.toLowerCase()) || item.category.toLowerCase().includes(searchField.toLowerCase())
+			return searchField.toLowerCase().split("|").some(el => item.name.toLowerCase().includes(el)) || searchField.toLowerCase().split("|").some(el => item.category.toLowerCase().includes(el))
 		});
         return (
 			<div>
@@ -50,12 +50,12 @@ class App extends Component {
 						/>
 					</Switch>
 				</Router>
-				<footer className="pv4 ph3 ph5-m ph6-l light-green">
-					<small className="f6 db tc">© 2020 <b className="ttu">PWP Landscape Architecture</b> All Rights Reserved</small>
-					<div className="tc mt3 mb4">
-						<a href="#language" title="Language" className="f6 dib ph2 link light-green dim">Language</a>
-						<a href="#terms" title="Terms" className="f6 dib ph2 link light-green dim">Terms of Use</a>
-						<a href="#privacy" title="Privacy" className="f6 dib ph2 link light-green dim">Privacy</a>
+				<footer className="pv4 ph3 ph5-m ph6-l">
+					<small className="f6 db tc black-60">© 2020 <b className="ttu">PWP Landscape Architecture</b> All Rights Reserved</small>
+					<div className="tc mt2 mb4">
+						<a href="#language" title="Language" className="f6 dib ph2 link dim black-60">Language</a>
+						<a href="#terms" title="Terms" className="f6 dib ph2 link dim black-60">Terms of Use</a>
+						<a href="#privacy" title="Privacy" className="f6 dib ph2 link dim black-60">Privacy</a>
 					</div>
 				</footer>
 			</div>

@@ -1,15 +1,16 @@
 h1 {
-	font-family: 'Century Gothic';
 	font-weight: 100;
-	color: #baf8e6;
 }
 
 h3 {
 	color: #363636;
-	max-width: 250px;
+	max-width: 220px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+	font-weight: 100;
+	margin-bottom: 0.5rem;
+	
 }
 
 p {
@@ -17,7 +18,7 @@ p {
 }
 
 a {
-	color: #1eaa8c;
+	color: #137752;
 	text-decoration: none;
 }
 
@@ -30,14 +31,17 @@ a {
 }
 
 .samebg {
-	background: linear-gradient(to right, #34e89e 0%, #0f3443 100%);
+	background: #ffffff;
 }
 
 .understicky {
-	position: absolute;
-	top: 191px;
+	margin-top: 240px;
 }
 
 .cg {
 	font-family: 'Century Gothic';
 }
+
+::placeholder { 
+	opacity: 0.5; 
+  }
