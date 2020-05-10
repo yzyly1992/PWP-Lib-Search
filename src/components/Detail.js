@@ -22,7 +22,7 @@ const Detail = ({ items, dataType }) => {
                 if (data !== undefined && data !== null && Object.keys(data).length !== 0) {
                     var kgitem = document.createElement('div');
                     kgitem.id='rel';
-                    kgitem.className='tc bg-white br3 pa3 mw7 ba b--black-10';
+                    kgitem.className='center tc bg-white br3 pa3 mw7 ba ma3 b--black-10';
                     document.getElementById("detail").appendChild(kgitem);
                     if ("image" in data[0].result) {
                     var kgimg = document.createElement('img');
@@ -47,8 +47,8 @@ const Detail = ({ items, dataType }) => {
         }
         
         return (
-            <div id="detail" className="flex items-center flex-column">
-                <div className='tc bg-white br3 pa3 mt4 mb3 mw7 ba b--black-10'>
+            <div id="detail">
+                <div className='center tc br3 pa3 ma3 mw7 ba b--black-10'>
                     <img alt='item' src={item.thumb300path} />
                     <div>
                         <h2>{item.name}</h2>

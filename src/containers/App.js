@@ -5,6 +5,7 @@ import Detail from '../components/Detail';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setSearchField, requestPlants, changeDataType } from '../actions';
 import { connect } from 'react-redux';
+import ScrollMemory from 'react-router-scroll-memory';
 
 const mapStateToProps = (state) => {
 	return {
@@ -36,6 +37,7 @@ class App extends Component {
         return (
 			<div>
 				<Router>
+					<ScrollMemory />
 					<Switch>
 						<Route 
 							exact 
