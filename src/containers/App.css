@@ -30,12 +30,8 @@ a {
 	z-index: 1;
 }
 
-.samebg {
-	background: #ffffff;
-}
-
 .understicky {
-	margin-top: 240px;
+	margin-top: 270px;
 }
 
 .cg {
@@ -44,4 +40,4 @@ a {
 
 ::placeholder { 
 	opacity: 0.5; 
-  }
+}
