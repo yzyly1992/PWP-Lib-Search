@@ -47,7 +47,7 @@ class App extends Component {
 						/>
 						<Route 
 							name="detail"
-							path={["/plants/:detailId", "/people/:detailId", "/texture/:detailId", "/3d/:detailId"]}
+							path={["/plants/:detailId", "/people/:detailId", "/texture/:detailId", "/3d/:detailId", "/faceme/:detailId"]}
 							render={(props) => <Detail {...props} items={ items } dataType={ dataType } />}
 						/>
 					</Switch>

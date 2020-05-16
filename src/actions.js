@@ -43,6 +43,14 @@ export const request3D = () => (dispatch) => {
         .catch(error => dispatch({ type: REQUEST_ROBOTS_FAILED, payload: error }))
 };
 
+export const requestFaceme = () => (dispatch) => {
+    dispatch({ type: REQUEST_ROBOTS_PENDING });
+    fetch('../faceme.json')
+        .then(response => response.json())
+        .then(data => dispatch({ type: REQUEST_ROBOTS_SUCCESS, payload: data }))
+        .catch(error => dispatch({ type: REQUEST_ROBOTS_FAILED, payload: error }))
+};
+
 export const changeDataType = (text) => ({
     type: CHANGE_DATA_TYPE,
     payload: text

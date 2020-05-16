@@ -32,6 +32,8 @@ Beta 3.0.5: Add white board app. See repositories [[white-board]](https://github
 Beta 3.0.6: Remove white board. Add 3D component data into the search.
 #### 2020-05-09
 Beta 3.1.1: Add sub-category, multiply keywords search, change theme to simple style. 
+#### 2020-05-16
+Beta 3.2.1: Add FaceMe Data, revise 3D and plants data.
 
 
 ## Available Scripts

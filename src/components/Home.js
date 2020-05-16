@@ -3,13 +3,14 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import { connect } from 'react-redux';
-import { setSearchField, requestPlants, requestPeople, requestTexture, request3D, changeDataType } from '../actions';
+import { setSearchField, requestPlants, requestPeople, requestTexture, request3D, requestFaceme, changeDataType } from '../actions';
 
 const mapDispatchToProps = (dispatch) => ({
     onRequestPlants: () => dispatch(requestPlants()),
     onRequestPeople: () => dispatch(requestPeople()),
     onRequestTexture: () => dispatch(requestTexture()),
     onRequest3D: () => dispatch(request3D()),
+    onRequestFaceme: () => dispatch(requestFaceme()),
     onChangeDataType: (type) => dispatch(changeDataType(type)),
     onSetSearch: (keyword) => dispatch(setSearchField(keyword)),
 });
@@ -80,6 +81,22 @@ class Home extends Component {
                         <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("other")} className="f7 db pa2 link dim dark-gray ba b--black-20">Other</a></li>
                     </ul>
                 )
+            case 'faceme':
+                return (
+                    <ul className="list">
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("people")} className="f7 db pa2 link dim dark-gray ba b--black-20">People</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("shrub")} className="f7 db pa2 link dim dark-gray ba b--black-20">Shrub</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("aquatic")} className="f7 db pa2 link dim dark-gray ba b--black-20">Aquatic</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("tree")} className="f7 db pa2 link dim dark-gray ba b--black-20">Tree</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("flower")} className="f7 db pa2 link dim dark-gray ba b--black-20">Flower</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("groundcover")} className="f7 db pa2 link dim dark-gray ba b--black-20">Groundcover</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("grass")} className="f7 db pa2 link dim dark-gray ba b--black-20">Grass</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("palm")} className="f7 db pa2 link dim dark-gray ba b--black-20">Palm</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("succulent")} className="f7 db pa2 link dim dark-gray ba b--black-20">Succulent</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("nz")} className="f7 db pa2 link dim dark-gray ba b--black-20">New Zealand</a></li>
+                        <li className="dib mr1 mb1"><a href="#0" onClick={() => this.props.onSetSearch("other")} className="f7 db pa2 link dim dark-gray ba b--black-20">Other</a></li>
+                    </ul>
+                )
             default:
                 return
         }
@@ -89,12 +106,13 @@ class Home extends Component {
             <div className='tc'>
                 <div className='sticky bg-white'>
                     <h1 className='f2 mb3 dib mr2 cg black-80'>PWP Library Search</h1>
-                    <p className="dib cg f7">Beta 3.1.2</p>
+                    <p className="dib cg f7">Beta 3.2.1</p>
                     <SearchBox searchChange={ this.props.onSearchChange }/>
                     <div className="tc cg mt2">
                         <a className="f6 f5-ns black dib mr3 hover-yellow" href="#plants" onClick= {() => { this.props.onRequestPlants(); this.props.onChangeDataType('plants'); this.props.onSetSearch('')}} >Plants</a>
                         <a className="f6 f5-ns black dib mr3 hover-light-pink" href="#people" onClick={() => {this.props.onRequestPeople(); this.props.onChangeDataType('people'); this.props.onSetSearch('')}} >People</a>
                         <a className="f6 f5-ns black dib mr3 hover-blue" href="#texture" onClick={() => {this.props.onRequestTexture(); this.props.onChangeDataType('texture'); this.props.onSetSearch('')}} >Texture</a>
+                        <a className="f6 f5-ns black dib mr3 hover-green" href="#faceme" onClick={() => {this.props.onRequestFaceme(); this.props.onChangeDataType('faceme'); this.props.onSetSearch('')}} >Face-Me</a>
                         <a className="f6 f5-ns black dib hover-silver" href="#3d" onClick={() => {this.props.onRequest3D(); this.props.onChangeDataType('3d'); this.props.onSetSearch('')}}>3D</a>
                     </div>
                     {this.renderSwitch(this.props.dataType)}
