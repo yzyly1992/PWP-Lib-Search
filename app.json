@@ -1,10 +1,14 @@
 {
-  apps : [
+  "apps" : [
     {
-      name      : "pwplib",
-      script    : "/usr/lib/node_modules/serve/bin/serve.js",
-      interpreter: "none",
-      args: " /home/dyang/PWP-Lib-Search/build -s -n"
+      "name"      : "pwplib",
+      "script"    : "/usr/lib/node_modules/serve/bin/serve.js",
+      "interpreter": "none",
+      "args": " /home/dyang/PWP-Lib-Search/build -s -n"
+    },
+    {
+      "name"      : "restart timer",
+      "script"    : "/home/dyang/PWP-Lib-Search/restart.js"
     }
   ]
 }
