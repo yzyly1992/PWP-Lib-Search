@@ -34,6 +34,8 @@ Beta 3.0.6: Remove white board. Add 3D component data into the search.
 Beta 3.1.1: Add sub-category, multiply keywords search, change theme to simple style. 
 #### 2020-05-16
 Beta 3.2.1: Add FaceMe Data, revise 3D and plants data.
+#### 2020-05-20
+Beta 3.2.2: Revise the scroll location memory and the plant.json.
 
 
 ## Available Scripts
