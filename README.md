@@ -36,6 +36,8 @@ Beta 3.1.1: Add sub-category, multiply keywords search, change theme to simple s
 Beta 3.2.1: Add FaceMe Data, revise 3D and plants data.
 #### 2020-05-20
 Beta 3.2.2: Revise the scroll location memory and the plant.json.
+#### 2020-07-15
+Beta 3.3.3: Update file path of plant cutouts.
 
 
 ## Available Scripts
