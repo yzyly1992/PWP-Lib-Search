@@ -106,7 +106,7 @@ class Home extends Component {
             <div className='tc'>
                 <div className='sticky bg-white'>
                     <h1 className='f2 mb3 dib mr2 cg black-80'>PWP Library Search</h1>
-                    <p className="dib cg f7">Beta 3.3.3</p>
+                    <p className="dib cg f7">1.0.1</p>
                     <SearchBox searchChange={ this.props.onSearchChange }/>
                     <div className="tc cg mt2">
                         <a className="f6 f5-ns black dib mr3 hover-yellow" href="#plants" onClick= {() => { this.props.onRequestPlants(); this.props.onChangeDataType('plants'); this.props.onSetSearch('')}} >Plants</a>
